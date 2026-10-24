@@ -1,26 +1,21 @@
-# Annaura website starter
+# Annaura website
 
-A responsive, colorful one-page landing website for Annaura, a developing food brand covering fresh vegetables, vegetable powders, frozen vegetables and mineral water.
+Responsive one-page website for Annaura, organized around two product categories and a dedicated third-party packaging/customization section.
 
-## Files
+## Structure
+- `index.html` — brand introduction and story, vegetable & dry powder category, mineral water category, customization section, business enquiry form
+- `styles.css` — colorful responsive visual design and CSS-built illustrative product mockups
+- `script.js` — mobile navigation, category-to-enquiry selection, and email-draft form behavior
 
-- `index.html` — page structure, navigation, product cards, brand story and enquiry form
-- `styles.css` — responsive styling, brand colors and CSS-made product illustrations
-- `script.js` — mobile navigation, current year and enquiry form behavior
+## Preview
+Open `index.html` in a modern browser. Google Fonts requires an internet connection; system fallbacks are included.
 
-## Preview locally
-
-Open `index.html` in a modern browser. Google Fonts requires an internet connection; fallback fonts are included.
-
-## Before publishing
-
-1. Add Annaura's real business email in `script.js` (`BUSINESS_EMAIL`), or connect a trusted form backend.
-2. Replace the CSS illustrations with approved product photography and real packaging.
-3. Confirm contact details, delivery regions, product availability and specifications.
-4. Verify organic certification, mineral composition and any other product claims before publishing them.
-5. Add a privacy notice matching the data you collect and how you use it.
-6. Test the site and enquiry flow on desktop and mobile.
+## Before launch
+1. Set `BUSINESS_EMAIL` in `script.js` to Annaura's real business email, or connect a trusted form backend.
+2. Replace concept illustrations with approved product photography and final packaging artwork.
+3. Confirm product availability, pack sizes, specifications, private-label/customization capability, minimum order quantities and timelines.
+4. Verify organic status, mineral-water specifications, certifications and all other product claims.
+5. Add a privacy notice appropriate to the data collected and test the enquiry flow on desktop and mobile.
 
 ## Important
-
-This is a front-end starter, not a full e-commerce store. The enquiry form does not transmit information unless a real email destination or form backend is configured. Product and certification claims should be published only after verification.
+This is a front-end website, not a full e-commerce store. The enquiry form does not transmit information until a real email destination or form service is configured. Customization, manufacturing and private-label services are described as enquiries and must be confirmed operationally before they are promised to customers.
