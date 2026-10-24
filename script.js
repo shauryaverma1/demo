@@ -51,3 +51,4 @@ form.addEventListener("submit", (event) => {
   status.textContent = "Opening your email app to prepare the enquiry…";
   window.location.href = `mailto:${BUSINESS_EMAIL}?subject=${subject}&body=${body}`;
 });
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) { const targets=document.querySelectorAll(".section-pad, .brand-note, .category-card, .promise-grid article, .contact-form");targets.forEach(el=>el.classList.add("reveal"));const observer=new IntersectionObserver((entries,obs)=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-visible");obs.unobserve(entry.target)}}),{threshold:.12});targets.forEach(el=>observer.observe(el));}
