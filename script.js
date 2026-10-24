@@ -18,16 +18,23 @@ if (menuButton && nav) {
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Add Annaura's real business email here before launch.
+// Set this to Annaura's real business email before launch.
 const BUSINESS_EMAIL = "";
-
 const form = document.getElementById("enquiry-form");
 const status = document.getElementById("form-status");
+
+document.querySelectorAll("[data-interest]").forEach((link) => {
+  link.addEventListener("click", () => {
+    const interest = document.getElementById("interest");
+    if (interest) interest.value = link.dataset.interest;
+  });
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(form);
   const name = String(data.get("name") || "").trim();
+  const company = String(data.get("company") || "").trim();
   const email = String(data.get("email") || "").trim();
   const interest = String(data.get("interest") || "").trim();
   const message = String(data.get("message") || "").trim();
@@ -37,9 +44,9 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
-  const subject = encodeURIComponent(`Annaura enquiry — ${interest}`);
+  const subject = encodeURIComponent(`Annaura business enquiry — ${interest}`);
   const body = encodeURIComponent(
-    `Hello Annaura,\n\nI'd like to enquire about: ${interest}.\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message || "No additional message."}\n`
+    `Hello Annaura,\n\nI'm interested in: ${interest}.\n\nName: ${name}\nCompany: ${company || "Not provided"}\nEmail: ${email}\n\nRequirements:\n${message || "No additional message."}\n`
   );
   status.textContent = "Opening your email app to prepare the enquiry…";
   window.location.href = `mailto:${BUSINESS_EMAIL}?subject=${subject}&body=${body}`;
