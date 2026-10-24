@@ -30,7 +30,7 @@ document.querySelectorAll("[data-interest]").forEach((link) => {
   });
 });
 
-form.addEventListener("submit", (event) => {
+if (form) form.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(form);
   const name = String(data.get("name") || "").trim();
